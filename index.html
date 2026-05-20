@@ -17,21 +17,23 @@
     font-weight:bold;
 }
 
-/* BODY */
+/* BODY (KEEP ONLY ONCE) */
 body{
     font-family:'Poppins', sans-serif;
     scroll-behavior:smooth;
     overflow-x:hidden;
 }
 
-/* TEXT */
+/* HEADINGS FONT */
 h1{
     font-family:'Dancing Script', cursive;
     color:brown;
     font-size:42px;
 }
 
+/* PARAGRAPH FONT */
 p{
+    font-family:'Poppins', sans-serif;
     color:brown;
     font-variant:small-caps;
     margin:10px 0;
@@ -42,21 +44,11 @@ p{
     height:100vh;
     background:linear-gradient(135deg, #ff9a9e, #fad0c4);
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    position:relative;
-}
-
-/* GLASS BOX */
-.box{
-    background:rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    padding:30px;
-    border-radius:20px;
     text-align:center;
-    border:1px solid rgba(255,255,255,0.4);
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    position:relative;
 }
 
 /* EMOJI */
@@ -149,7 +141,7 @@ button{
 
 <body>
 
-<!-- 🎵 BACKGROUND MUSIC -->
+<!-- 🎵 MUSIC -->
 <audio id="bg-music" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
@@ -157,13 +149,14 @@ button{
 <!-- 🎀 FIRST PAGE -->
 <section class="section1">
 
-    <div class="box">
+    <!-- FIXED HTML -->
+    <div>
         <h1>HAPPY BIRTHDAY JANIEE</h1>
-        <p>IT'S YOUR SPECIAL DAY 🫀</p>
+        <p>LETS MAKE YOUR DAY MORE SPECIAL</p>
 
-        <div class="emoji">🫀❤️💘💗</div>
+        <div class="emoji">🎂</div>
 
-        <button onclick="goDown()">LETS SEE 🙈</button>
+        <button onclick="goDown()">LETS SEE</button>
     </div>
 
     <!-- HEARTS -->
@@ -202,7 +195,9 @@ button{
 
     <div class="box2">
         <h1>SPECIAL MESSAGE</h1>
-        <p>"WHEN YOU CALL ME "JAAN" I GOT BLUSHING 🤌🏻🫠 THE WAY YOU CALL ME "BETAA ❤️‍🔥" I FEEL LIKE I ACTUALLY MATTERS ,THE WAY YOU MAKE EFFORTS 🫶🏻♾️💗 I WISH THAT WE STAY LIKE THIS FOREVER, WHEN I SAY I LOVE YOU I NEVER LIED AND AGAIN HAPPY BIRTHDAY TO MY PASNDIDA SHAKS 🫶🏻💗♾️</p>
+        <p>
+        "WHEN YOU CALL ME 'JAAN' I GOT BLUSHING 🤌🏻🫠 THE WAY YOU CALL ME 'BETAA ❤️‍🔥' I FEEL LIKE I ACTUALLY MATTERS, THE WAY YOU MAKE EFFORTS 🫶🏻♾️💗 I WISH THAT WE STAY LIKE THIS FOREVER. WHEN I SAY I LOVE YOU I NEVER LIED. AND AGAIN HAPPY BIRTHDAY TO MY PASNDIDA SHAKS 🫶🏻💗♾️"
+        </p>
     </div>
 
 </section>
@@ -214,11 +209,10 @@ function goDown(){
     });
 }
 
-/* 🎵 PLAY MUSIC ON FIRST CLICK */
+/* MUSIC PLAY */
 window.addEventListener("click", function() {
     document.getElementById("bg-music").play();
 }, { once: true });
-
 </script>
 
 </body>
